@@ -63,5 +63,13 @@ main>.container {
 
 .messagestyle{
     font-size: 1.5rem;
+}
+
+/* JS font */
+.boldItem{
     font-weight: bold;
+}
+
+.logoPageHeight{
+    height: 5rem;
 }

@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>APP NAME: Challenge By Chris Rivera</title>
+    <title>Hundo: Challenge By Chris Rivera</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,8 +37,8 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="/img/logo_favicon.ico" width="30" class="d-inline-block align-text-top me-1">
-                APP NAME</a>
+                <img src="/img/Hundo_Logo_50.png" width="30" class="d-inline-block align-text-top me-1">
+                Hundo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -66,23 +66,51 @@
     </nav>
 
     <main class="flex-shrink-0">
-        <div class="container mt-5">
-            <h1>To Do List</h1>
-            <div class="row align-items-end">
+        <div class="container mt-5 h-100">
+            <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col">
-                    <label for="txtmessage" class="form-label">Item</label>
-                    <input type="text" name="txtmessage" class="form-control" id="txtmessage"
-                        placeholder="Enter a item">
+                    <div class="row">
+                        <div class="col-1">
+                            <img src="/img/Hundo_Logo_50.png">
+                        </div>
+                        <div class="col">
+                            <h1>Hundo</h1>
+                        </div>
+                    </div>
+                    <p>Live life one loop at a time. A javascript coding exercise using loops. Write a program the
+                        displays
+                        the
+                        numbers from 0 to 100. Display the even numbers in BOLD.
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <label class="form-label" for="startValue">Enter a start value</label>
+                            <input class="form-control" type="number" id="startValue" value="1">
+                        </div>
+                        <div class="col">
+                            <label class="form-label" for="endValue">Enter an end value</label>
+                            <input class="form-control" type="number" id="endValue" value="100">
+                        </div>
+                    </div>
+                    <button id="btnSubmit" class="btn btn-success mt-3 mb-2">Display the Hundo</button>
                 </div>
                 <div class="col">
-                    <button id="btnSubmit" class="btn btn-primary">Add</button>
+                    <h3>Instructions:</h3>
+                    <hr>
+                    <p>Enter a starting value and an ending value. Press the button and the values will appear </p>
+                    <hr>
+
+                    <div class="messagestyle mt-5">
+                        <h1>Results</h1>
+                        <div id="results" class="row row-cols-5 row-cols-md-10 text-center">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="messagestyle mt-5">
-                <ol id="results" class="list-group list-group-numbered">
-                    <!-- Message will go here -->
-                </ol>
-            </div>
+
+
+
+
         </div>
     </main>
 
@@ -121,7 +149,7 @@
 
 
     <script>
-        document.getElementById("btnSubmit").addEventListener("click", getMessage)
+        document.getElementById("btnSubmit").addEventListener("click", getValues)
     </script>
 
 

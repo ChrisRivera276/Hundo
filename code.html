@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>APP NAME: Challenge By Chris Rivera</title>
+    <title>Hundo: Challenge By Chris Rivera</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,8 +38,8 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
-                <img src="/img/logo_favicon.ico" width="30" class="d-inline-block align-text-top me-1">
-                APP NAME</a>
+                <img src="/img/Hundo_Logo_50.png" width="30" class="d-inline-block align-text-top me-1">
+                Hundo</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -68,29 +68,42 @@
 
     <main class="flex-shrink-0">
         <div class="container mt-5">
-            <h1>THE CODE for App Name</h1>
+            <h1>The CODE for Hundo</h1>
             <div class="row">
                 <div class="col-12 col-lg-8 border border-danger">
                     <pre class="line-numbers">
                         <code class="language-javascript">
                             // Step One - controller accept request
-                            function getMessage() {
-                                let msg = document.getElementById("txtmessage").value;
-                                displayMessage(msg);
+                            function getValues() {
+                                let startValue = document.getElementById("startValue").value;
+                                let endValue = document.getElementById("endValue").value;
+                            
+                                displayValues(startValue, endValue);
                             }
                             // Final Step - view
-                            function displayMessage(message) {
+                            function displayValues(start, end) {
                             
                                 //fist get ol element from page
                                 element = document.getElementById("results");
-                                //next create new li element
-                                let item = document.createElement("li");
-                                //add classes to li element
-                                item.classList.add("list-group-item");
-                                // set message for li element
-                                item.innerHTML = message;
-                                // add new item to list
-                                element.appendChild(item);
+                            
+                                for (let i = start; i <= end; i++) {
+                            
+                            
+                                    //next create new div element
+                                    let item = document.createElement("div");
+                            
+                                    if (i % 2 == 0) {
+                                        item.classList.add("boldItem");
+                                    }
+                            
+                                    //add classes to div element
+                                    item.classList.add("col");
+                                    // set message for div element
+                                    item.innerHTML = i;
+                                    // add new item to list
+                                    element.appendChild(item);
+                                }
+                            }
                             }
                         </code>
                     </pre>
