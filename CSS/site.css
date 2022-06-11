@@ -70,6 +70,11 @@ main>.container {
     font-weight: bold;
 }
 
+.redItem{
+    color: red;
+    font-weight: bold;
+}
+
 .logoPageHeight{
     height: 5rem;
 }
