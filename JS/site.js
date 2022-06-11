@@ -8,13 +8,16 @@ function getValues() {
 // Final Step - view
 function displayValues(start, end) {
 
+    let startNum = parseInt(start);
+    let endNum = parseInt(end);
+
     //fist get ol element from page
     element = document.getElementById("results");
     // prevent the user from using any number not between 1 and 100
-    if (start >= 1 && end <= 100) {
-        start = start.replace(/^0+/, '');
-        end = end.replace(/^0+/, '');
-        for (let i = start; i <= end; i++) {
+    if (startNum >= 1 && endNum <= 100) {
+
+
+        for (let i = startNum; i <= endNum; i++) {
 
             //next create new div element
             let item = document.createElement("div");
